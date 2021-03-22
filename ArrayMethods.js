@@ -5,7 +5,6 @@ arr.splice(1, 1);
 console.log(arr ); 
 
 
-
 let arr1 = ["You", "are", "smart", "educated", "beatiful"];
 
 
