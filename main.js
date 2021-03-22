@@ -876,7 +876,13 @@ console.log( getLastDayOfMonth(2012, 0) ); // 31
 console.log( getLastDayOfMonth(2012, 1) ); // 29
 console.log( getLastDayOfMonth(2013, 1) ); // 28
 
+let today = new Date();
 
+today.setHours(0);
+console.log(today); 
+
+today.setHours(0, 0, 0, 0);
+console.log(today); 
                     // Формат JSON, метод toJSON
 let user7 = {
   name: "Erik",
@@ -926,4 +932,6 @@ schedule = JSON.parse(schedule, function(key, value) {
   return value;
 });
 
-console.log( schedule.meetups[1].date.getDate() ); // 18 - отлично!
+console.log( schedule.meetups[1].date.getDate() ); // 18
+
+              
