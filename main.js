@@ -539,399 +539,399 @@
 // console.log( fruits );
 
 
-// -Методы массивов
 
-let arr = ["Hello", "my", "friend"];
 
-arr.splice(1, 1); 
+// let arr = ["Hello", "my", "friend"];
 
-console.log(arr ); 
+// arr.splice(1, 1); 
 
+// console.log(arr ); 
 
 
-let arr1 = ["You", "are", "smart", "educated", "beatiful"];
 
+// let arr1 = ["You", "are", "smart", "educated", "beatiful"];
 
-arr1.splice(0, 3, "my", "friend");
 
-console.log( arr1 ) 
+// arr1.splice(0, 3, "my", "friend");
 
+// console.log( arr1 ) 
 
 
-let arr2 = ["One", "day", "dead"];
 
+// let arr2 = ["One", "day", "dead"];
 
-arr2.splice(2, 0, "we", "will");
 
-console.log( arr2 ); 
+// arr2.splice(2, 0, "we", "will");
 
+// console.log( arr2 ); 
 
-let arr3 = [3, 4];
 
-console.log( arr.concat([5, 6]) ); 
-console.log( arr.concat([7, 8], [9, 10]) ); 
-console.log( arr.concat([7, 8], 9, 10) ); 
+// let arr3 = [3, 4];
 
+// console.log( arr.concat([5, 6]) ); 
+// console.log( arr.concat([7, 8], [9, 10]) ); 
+// console.log( arr.concat([7, 8], 9, 10) ); 
 
-let arr4 = [1, 2];
 
-let arrayLike = {
-  0: "call",
-  1: "me",
-  [Symbol.isConcatSpreadable]: true,
-  length: 2
-};
+// let arr4 = [1, 2];
 
-console.log( arr.concat(arrayLike) ); 
+// let arrayLike = {
+//   0: "call",
+//   1: "me",
+//   [Symbol.isConcatSpreadable]: true,
+//   length: 2
+// };
 
-let users = [
-  {id: 1, name: "Jack"},
-  {id: 2, name: "John"},
-  {id: 3, name: "Ahmed"}
-];
+// console.log( arr.concat(arrayLike) ); 
 
-let user = users.find(item => item.id == 1);
+// let users = [
+//   {id: 1, name: "Jack"},
+//   {id: 2, name: "John"},
+//   {id: 3, name: "Ahmed"}
+// ];
 
-console.log(user.name); //Jack
+// let user = users.find(item => item.id == 1);
 
+// console.log(user.name); //Jack
 
-let arr5 = [ 2, 4, 20 ];
 
+// let arr5 = [ 2, 4, 20 ];
 
-arr.sort();
 
-console.log( arr5);  // 2,20, 4
+// arr.sort();
 
-function compareNumeric(a, b) {
-  if (a > b) return 1;
-  if (a == b) return 0;
-  if (a < b) return -1;
-}
+// console.log( arr5);  // 2,20, 4
 
-let arr6 = [ 2, 4, 20];
+// function compareNumeric(a, b) {
+//   if (a > b) return 1;
+//   if (a == b) return 0;
+//   if (a < b) return -1;
+// }
 
-arr6.sort(compareNumeric);
+// let arr6 = [ 2, 4, 20];
 
-console.log(arr6);  
+// arr6.sort(compareNumeric);
 
+// console.log(arr6);  
 
-let arr7 = [ 3, 7, 20 ];
 
-arr7.sort(function(a, b) { return a - b; });
+// let arr7 = [ 3, 7, 20 ];
 
-console.log(arr7);  //3,7,20
+// arr7.sort(function(a, b) { return a - b; });
 
-let arr8 = [1, 2, 3, 4, 5];
-arr8.reverse();
+// console.log(arr7);  //3,7,20
 
-console.log( arr8 ); // 5,4,3,2,
+// let arr8 = [1, 2, 3, 4, 5];
+// arr8.reverse();
 
-let arr9 = 'Lilit, Anna, Gloria, Masha'.split(', ', 2);
+// console.log( arr8 ); // 5,4,3,2,
 
-console.log(arr9); // Lilit, Anna
+// let arr9 = 'Lilit, Anna, Gloria, Masha'.split(', ', 2);
 
+// console.log(arr9); // Lilit, Anna
 
-let str = "brain";
 
-console.log( str.split('') ); // brain
+// let str = "brain";
 
-let army = {
-  minAge: 18,
-  maxAge: 27,
-  canJoin(user) {
-    return user.age >= this.minAge && user.age < this.maxAge;
-  }
-};
+// console.log( str.split('') ); // brain
 
-let users2 = [
-  {age: 16},
-  {age: 20},
-  {age: 23},
-  {age: 30}
-];
+// let army = {
+//   minAge: 18,
+//   maxAge: 27,
+//   canJoin(user) {
+//     return user.age >= this.minAge && user.age < this.maxAge;
+//   }
+// };
 
+// let users2 = [
+//   {age: 16},
+//   {age: 20},
+//   {age: 23},
+//   {age: 30}
+// ];
 
-let soldiers = users2.filter(army.canJoin, army);
 
-console.log(soldiers.length); // 2
-console.log(soldiers[0].age); // 20
-console.log(soldiers[1].age); // 23
+// let soldiers = users2.filter(army.canJoin, army);
 
+// console.log(soldiers.length); // 2
+// console.log(soldiers[0].age); // 20
+// console.log(soldiers[1].age); // 23
 
-function copySorted(arr) {
-  return arr.slice().sort();
-}
 
-let arr10 = ["Ruby", "C++", "Java"];
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
 
-let sorted = copySorted(arr10);
+// let arr10 = ["Ruby", "C++", "Java"];
 
-console.log( sorted );
-console.log( arr10 );
+// let sorted = copySorted(arr10);
 
+// console.log( sorted );
+// console.log( arr10 );
 
-let manya = { name: "Manya", age: 18 };
-let petya = { name: "Petya", age: 31 };
-let rima = { name: "Rima", age: 24 };
 
-let users3 = [ manya, petya, rima ];
+// let manya = { name: "Manya", age: 18 };
+// let petya = { name: "Petya", age: 31 };
+// let rima = { name: "Rima", age: 24 };
 
-let names = users3.map(item => item.name);
+// let users3 = [ manya, petya, rima ];
 
-console.log( names ); 
+// let names = users3.map(item => item.name);
 
+// console.log( names ); 
 
-function getAverageAge(users) {
-  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
-}
 
-let vardan = { name: "Vardan", age: 30 };
-let ara = { name: "Ara", age: 25 };
-let ani= { name: "Ani", age: 32 };
+// function getAverageAge(users) {
+//   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+// }
 
-let arr11 = [ vardan, ara, ani ];
+// let vardan = { name: "Vardan", age: 30 };
+// let ara = { name: "Ara", age: 25 };
+// let ani= { name: "Ani", age: 32 };
 
-console.log( getAverageAge(arr11) ); // 29
+// let arr11 = [ vardan, ara, ani ];
+
+// console.log( getAverageAge(arr11) ); // 29
                
                
                
-                  //  Перебираемые объекты
-let range = {
-  from: 2,
-  to: 4
-};
+                  
+// let range = {
+//   from: 2,
+//   to: 4
+// };
 
-range[Symbol.iterator] = function() {
+// range[Symbol.iterator] = function() {
 
-  return {
-    current: this.from,
-    last: this.to,
+//   return {
+//     current: this.from,
+//     last: this.to,
 
     
-    next() {
+//     next() {
      
-      if (this.current <= this.last) {
-        return { done: false, value: this.current++ };
-      } else {
-        return { done: true };
-      }
-    }
-  };
-};
+//       if (this.current <= this.last) {
+//         return { done: false, value: this.current++ };
+//       } else {
+//         return { done: true };
+//       }
+//     }
+//   };
+// };
 
 
-for (let num of range) {
-  console.log(num); // 2,3,4
-}
+// for (let num of range) {
+//   console.log(num); // 2,3,4
+// }
 
-let str2 = 'A😂';
-for (let char of str2) {
-    console.log( char ); }
-
-
-
-
-    let str3 = "brain";
-let iterator = str[Symbol.iterator]();
-while (true) {
-  let result = iterator.next();
-  if (result.done) break;
-  console.log(result.value); }
-
-
-  let lusine = { name: "Lusine" };
-
-let visitsCountObj = {}; 
-visitsCountObj[lusine] = 123;
-console.log( visitsCountObj["[object Object]"] ); // 123
-
-
-                          // Map 
-let recipeMap = new Map([
-  ["tomamto", 800],
-  ["cucumber", 550],
-  ["onion",    100]
-]);
-
-
-for (let vegetable of recipeMap.keys()) {
-  console.log(vegetable); 
-}
-
-
-for (let amount of recipeMap.values()) {
-  console.log(amount); // 800,550,100
-}
-
-
-for (let entry of recipeMap) { 
-  console.log(entry); //800,500,100
-}
-
-let prices = Object.fromEntries([
-  ['orange', 1],
-  ['apple', 2],
-  ['chichken', 4]
-]);
-
-console.log(prices.apple);
-
-
-                      // Set
-
-let set = new Set();
-let harry = { name: "Harry" };
-let katrin = { name: "Kattrin" };
-let eliza= { name: "Eliza" };
-
-
-set.add(harry);
-set.add(katrin);
-set.add(eliza);
-set.add(harry);
-set.add(eliza);
-
-console.log(set.size); // 3
-
-for (let user of set) {
-  console.log(user.name); 
-   }
-
-
-                    //  WeakMap и WeakSet
-let visitedSet = new WeakSet();
-
-let sevak= { name: "Sevak" };
-let andre= { name: "Andre" };
-let gohar= {name: "Gohar" };
-
-visitedSet.add(sevak);
-visitedSet.add(andre);
-visitedSet.add(sevak);
-console.log(visitedSet.has(sevak)); // true
-console.log(visitedSet.has(gohar)); // false
-
-                // Object.keys, values, entries
-let user5 ={
-  name:"Anahit",
-  age: 26,
-};
-for(let value of Object.values(user5)){
-  console.log(value)
-}
+// let str2 = 'A😂';
+// for (let char of str2) {
+//     console.log( char ); }
 
 
 
-                  // Деструктурирующее присваивание
-let options = {
-  title: "Menu"
-};
-let {width = 150, height = 100, title} = options;
 
-console.log(title);  // Menu
-console.log(width);  // 150
-console.log(height); // 100
+//     let str3 = "brain";
+// let iterator = str[Symbol.iterator]();
+// while (true) {
+//   let result = iterator.next();
+//   if (result.done) break;
+//   console.log(result.value); }
+
+
+//   let lusine = { name: "Lusine" };
+
+// let visitsCountObj = {}; 
+// visitsCountObj[lusine] = 123;
+// console.log( visitsCountObj["[object Object]"] ); // 123
 
 
                         
-let options2 = {
-  title1: "Menu"
-};
-
-let {width: w = 200, height: h = 150, title1} = options2;
-
-console.log(title1);  // Menu
-console.log(w);      // 200
-console.log(h);      // 150
+// let recipeMap = new Map([
+//   ["tomamto", 800],
+//   ["cucumber", 550],
+//   ["onion",    100]
+// ]);
 
 
-
-                    //  Дата и время
-let Jan01_1970= new Date(0)
-console.log(Jan01_1970)
-
-
-let date=new Date ("2020-06-20");
-console.log(date);
+// for (let vegetable of recipeMap.keys()) {
+//   console.log(vegetable); 
+// }
 
 
-
-let date2 = new Date(2016, 0, 2);
-
-date2.setDate(1); 
-console.log( date2 );
-
-date2.setDate(0);  
-console.log( date2 ); // 31  Dec 2015
-
-let date3 = new Date( Date.parse('2014-01-26T13:51:50.417-07:00') );
-
-console.log(date3);
-
-function getLastDayOfMonth(year, month) {
-  let date = new Date(year, month + 1, 0);
-  return date.getDate();
-}
-console.log( getLastDayOfMonth(2012, 0) ); // 31
-console.log( getLastDayOfMonth(2012, 1) ); // 29
-console.log( getLastDayOfMonth(2013, 1) ); // 28
-
-let today = new Date();
-
-today.setHours(0);
-console.log(today); 
-
-today.setHours(0, 0, 0, 0);
-console.log(today); 
-                    // Формат JSON, метод toJSON
-let user7 = {
-  name: "Erik",
-  age: 29,
-  roles: {
-    isAdmin: false,
-    isEditor: true
-  }
-};
-
-console.log(JSON.stringify(user7, null, 2));
+// for (let amount of recipeMap.values()) {
+//   console.log(amount); // 800,550,100
+// }
 
 
-let room = {
-  number: 38,
-  toJSON() {
-    return this.number;
-  }
-};
+// for (let entry of recipeMap) { 
+//   console.log(entry); //800,500,100
+// }
 
-let meetup = {
-  title: "Conference",
-  room
-};
+// let prices = Object.fromEntries([
+//   ['orange', 1],
+//   ['apple', 2],
+//   ['chichken', 4]
+// ]);
 
-console.log( JSON.stringify(room) ); // 38
-
-console.log( JSON.stringify(meetup) );
+// console.log(prices.apple);
 
 
-let numbers = "[0, 1, 2, 3]";
+                   
 
-numbers = JSON.parse(numbers);
+// let set = new Set();
+// let harry = { name: "Harry" };
+// let katrin = { name: "Kattrin" };
+// let eliza= { name: "Eliza" };
 
-console.log( numbers[1] ); // 1
+
+// set.add(harry);
+// set.add(katrin);
+// set.add(eliza);
+// set.add(harry);
+// set.add(eliza);
+
+// console.log(set.size); // 3
+
+// for (let user of set) {
+//   console.log(user.name); 
+//    }
 
 
-let schedule = `{
-  "meetups": [
-    {"title":"Conference","date":"2021-11-30T12:00:00.000Z"},
-    {"title":"Birthday","date":"2020-04-18T12:00:00.000Z"}
-  ]
-}`;
+                    
+// let visitedSet = new WeakSet();
 
-schedule = JSON.parse(schedule, function(key, value) {
-  if (key == 'date') return new Date(value);
-  return value;
-});
+// let sevak= { name: "Sevak" };
+// let andre= { name: "Andre" };
+// let gohar= {name: "Gohar" };
 
-console.log( schedule.meetups[1].date.getDate() ); // 18
+// visitedSet.add(sevak);
+// visitedSet.add(andre);
+// visitedSet.add(sevak);
+// console.log(visitedSet.has(sevak)); // true
+// console.log(visitedSet.has(gohar)); // false
+
+//                 // Object.keys, values, entries
+// let user5 ={
+//   name:"Anahit",
+//   age: 26,
+// };
+// for(let value of Object.values(user5)){
+//   console.log(value)
+// }
+
+
+
+
+// let options = {
+//   title: "Menu"
+// };
+// let {width = 150, height = 100, title} = options;
+
+// console.log(title);  // Menu
+// console.log(width);  // 150
+// console.log(height); // 100
+
+
+                        
+// let options2 = {
+//   title1: "Menu"
+// };
+
+// let {width: w = 200, height: h = 150, title1} = options2;
+
+// console.log(title1);  // Menu
+// console.log(w);      // 200
+// console.log(h);      // 150
+
+
+
+                    
+// let Jan01_1970= new Date(0)
+// console.log(Jan01_1970)
+
+
+// let date=new Date ("2020-06-20");
+// console.log(date);
+
+
+
+// let date2 = new Date(2016, 0, 2);
+
+// date2.setDate(1); 
+// console.log( date2 );
+
+// date2.setDate(0);  
+// console.log( date2 ); // 31  Dec 2015
+
+// let date3 = new Date( Date.parse('2014-01-26T13:51:50.417-07:00') );
+
+// console.log(date3);
+
+// function getLastDayOfMonth(year, month) {
+//   let date = new Date(year, month + 1, 0);
+//   return date.getDate();
+// }
+// console.log( getLastDayOfMonth(2012, 0) ); // 31
+// console.log( getLastDayOfMonth(2012, 1) ); // 29
+// console.log( getLastDayOfMonth(2013, 1) ); // 28
+
+// let today = new Date();
+
+// today.setHours(0);
+// console.log(today); 
+
+// today.setHours(0, 0, 0, 0);
+// console.log(today); 
+                    
+// let user7 = {
+//   name: "Erik",
+//   age: 29,
+//   roles: {
+//     isAdmin: false,
+//     isEditor: true
+//   }
+// };
+
+// console.log(JSON.stringify(user7, null, 2));
+
+
+// let room = {
+//   number: 38,
+//   toJSON() {
+//     return this.number;
+//   }
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   room
+// };
+
+// console.log( JSON.stringify(room) ); // 38
+
+// console.log( JSON.stringify(meetup) );
+
+
+// let numbers = "[0, 1, 2, 3]";
+
+// numbers = JSON.parse(numbers);
+
+// console.log( numbers[1] ); // 1
+
+
+// let schedule = `{
+//   "meetups": [
+//     {"title":"Conference","date":"2021-11-30T12:00:00.000Z"},
+//     {"title":"Birthday","date":"2020-04-18T12:00:00.000Z"}
+//   ]
+// }`;
+
+// schedule = JSON.parse(schedule, function(key, value) {
+//   if (key == 'date') return new Date(value);
+//   return value;
+// });
+
+// console.log( schedule.meetups[1].date.getDate() ); // 18
 
               
