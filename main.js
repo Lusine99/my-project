@@ -902,11 +902,10 @@
 //     return this.number;
 //   }
 // };
-
-// let meetup = {
-//   title: "Conference",
-//   room
-// };
+let meetup = {
+  title: "Conference",
+  room
+};
 
 // console.log( JSON.stringify(room) ); // 38
 
