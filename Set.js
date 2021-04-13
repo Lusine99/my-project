@@ -1,17 +1,13 @@
-let set = new Set();
-let harry = { name: "Harry" };
-let katrin = { name: "Kattrin" };
-let eliza= { name: "Eliza" };
-
-
-set.add(harry);
-set.add(katrin);
-set.add(eliza);
-set.add(harry);
-set.add(eliza);
-
-console.log(set.size); // 3
-
-for (let user of set) {
-  console.log(user.name); 
-   }
+function User(name, birhtday) {
+    this.name = name;
+    this.birhtday = birhtday;
+    Object.defineProperty (this ,"age", {
+        get (){
+            let todayYear = new Date().getFullYear();
+            return todayYear - this.birhtday.getFullYear()
+  }
+  });
+}
+let lusine = new User ("Lusine" ,new Date(1999,6, 20));
+console.log(lusine.birhtday);
+console.log(lusine.age);
